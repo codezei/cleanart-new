@@ -1,0 +1,45 @@
+section.why#why.bg.bg-wave.js-observe
+    .container.block.custom-container.default-grid
+        .default-grid__header
+            +headings('Dlaczego warto nam zaufać', 'Profesjonalne czyszczenie bez kompromisów', 'Doświadczenie, odpowiedni sprzęt i dokładna praca przekładają się na efekt, który widać od razu')
+        .default-grid__body
+            .row.row-cols-sm-2
+                .col.card.card-white.card-column.animate-fade-in(style="--i: 0;")
+                    .card__header.card__row
+                        .card__icon
+                            svg(width="48" height="48")
+                                use(href="#effective")
+                        h3.h5.card__title Skuteczne usuwanie zabrudzeń
+                    .card__body
+
+                        p.card__text Usuwamy plamy, ślady codziennego użytkowania, sierść i inne zabrudzenia, dobierając odpowiednią metodę do czyszczonej powierzchni.
+                .col.card.card-white.card-column.animate-fade-in(style="--i: 1;")
+                    .card__header.card__row
+                        .card__icon
+                            svg(width="48" height="48")
+                                use(href="#materials")
+                        h3.h5.card__title Odpowiednia metoda do materiału
+                    .card__body
+
+                        p.card__text Przed rozpoczęciem pracy oceniamy rodzaj materiału oraz stopień zabrudzenia, stosując bezpieczne i skuteczne środki czyszczące.
+                .col.card.card-white.card-column.animate-fade-in(style="--i: 2;")
+                    .card__header.card__row
+                        .card__icon
+                            svg(width="48" height="48")
+                                use(href="#intime")
+                        h3.h5.card__title Dojazd do klienta
+                    .card__body
+
+                        p.card__text Nie musisz transportować mebli ani dywanów. Przyjeżdżamy na miejsce i wykonujemy usługę bezpośrednio u Ciebie.
+                .col.card.card-white.card-column.animate-fade-in(style="--i: 3;")
+                    .card__header.card__row
+                        .card__icon
+                            svg(width="48" height="48")
+                                use(href="#safe")
+                        h4.h5.card__title Dokładna praca i kontrola efektu
+                    .card__body
+
+                        p.card__text Po zakończeniu czyszczenia sprawdzamy efekt naszej pracy, zwracając uwagę na miejsca wymagające dodatkowego działania.
+        .default-grid__footer
+            +cta-button("Zadzwon", "cta")(class="btn-icon-tel")
+            //- +cta-messengers()

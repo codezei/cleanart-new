@@ -1,0 +1,184 @@
+script(type="application/ld+json").
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Strona główna",
+                        "item": "https://cleanart-wroclaw.pl/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Pranie materacy",
+                        "item": "https://cleanart-wroclaw.pl/pranie-materacy.html"
+                    }
+                ]
+            },
+            {
+                "@type": "Service",
+                "@id": "https://cleanart-wroclaw.pl/pranie-materacy.html#service",
+                "name": "Pranie materacy",
+                "serviceType": "Pranie i czyszczenie materacy",
+                "description": "Profesjonalne pranie i czyszczenie materacy we Wrocławiu i okolicach. Usuwanie plam, potu, kurzu, roztoczy i nieprzyjemnych zapachów.",
+                "provider": {
+                    "@type": "ProfessionalService",
+                    "@id": "https://cleanart-wroclaw.pl/#business",
+                    "name": "CleanArt",
+                    "url": "https://cleanart-wroclaw.pl/",
+                    "telephone": "+48721587252",
+                    "email": "contact.cleanart.pro@gmail.com",
+                    "areaServed": [
+                        {
+                            "@type": "City",
+                            "name": "Wrocław"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Oleśnica"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Trzebnica"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Oborniki Śląskie"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Żmigród"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Milicz"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Brzeg Dolny"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Wołów"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Rawicz"
+                        }
+                    ],
+                    "openingHoursSpecification": [
+                        {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": [
+                                "Monday",
+                                "Tuesday",
+                                "Wednesday",
+                                "Thursday",
+                                "Friday",
+                                "Saturday",
+                                "Sunday"
+                            ],
+                            "opens": "06:00",
+                            "closes": "22:00"
+                        }
+                    ]
+                },
+                "areaServed": [
+                    {
+                        "@type": "City",
+                        "name": "Wrocław"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Oleśnica"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Trzebnica"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Oborniki Śląskie"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Żmigród"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Milicz"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Brzeg Dolny"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Wołów"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Rawicz"
+                    }
+                ],
+                "availableChannel": {
+                    "@type": "ServiceChannel",
+                    "servicePhone": {
+                        "@type": "ContactPoint",
+                        "telephone": "+48721587252",
+                        "contactType": "customer service",
+                        "areaServed": "PL"
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Jak często należy prać materac?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Pranie materaca warto wykonywać co 6–12 miesięcy. W przypadku dzieci, zwierząt domowych lub alergików częstotliwość czyszczenia może być większa."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Czy można usunąć plamy z moczu i nieprzyjemne zapachy z materaca?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "W wielu przypadkach możemy skutecznie usunąć plamy pochodzenia biologicznego i ograniczyć nieprzyjemne zapachy. Dobieramy odpowiednie środki i sposób czyszczenia do rodzaju zabrudzenia."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Czy pranie materaca jest bezpieczne dla alergików?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Profesjonalne pranie pomaga usunąć kurz, roztocza i inne zanieczyszczenia. Stosujemy środki przeznaczone do czyszczenia materacy i odpowiednie do ich rodzaju."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Ile trwa schnięcie materaca po czyszczeniu?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "W dobrze wentylowanym pomieszczeniu materac zwykle schnie 6–12 godzin. Oferujemy również usługę wymuszonego suszenia, która pozwala skrócić czas schnięcia."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Ile kosztuje pranie materaca we Wrocławiu?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Cena zależy przede wszystkim od rozmiaru materaca. Pranie materaca jednoosobowego kosztuje od 180 zł, a dwuosobowego od 250 zł."
+                        }
+                    }
+                ]
+            }
+        ]
+    }

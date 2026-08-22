@@ -1,0 +1,23 @@
+section.works.block#works.bg-light.js-observe
+    .container.custom-container
+        +headings('Realizacje', 'Efekty naszej pracy', 'Zobacz zdjęcia wykonanych realizacji i efekty czyszczenia różnych powierzchni')
+        +categories(['Tapicerka meblowa', 'Materace', 'Dywany', 'Tapicerka samochodowa'])
+        .categories-content
+            .swiper.categories-content-swiper(data-auto-height="true")
+                .swiper-wrapper
+                    article.swiper-slide
+                        h3.categories-content__title Efekty <span class="text-accent">czyszczenia kanap, narożników i foteli</span>
+                        +gallery(works.furniture,  [1,2,3,4,5,6,7,8], "Tapicerka meblowa")
+                    article.swiper-slide
+                        h3.categories-content__title Efekty <span class="text-accent">prania materacy</span> — zdjęcia przed i po
+                        +gallery(works.mattress,  [1,2,3,4], "Materace")
+                    article.swiper-slide
+                        h3.categories-content__title Efekty <span class="text-accent">czyszczenia dywanów</span> — zdjęcia przed i po
+                        +gallery(works.carpet,  [1,2,3,4], "Dywany i wykładziny")
+                    article.swiper-slide
+                        h3.categories-content__title Efekty <span class="text-accent">czyszczenia tapicerki samochodowej</span>
+                        +gallery(works.salon,  [1,2,3,4], "Tapicerka samochodowa")
+                .categories-content-navigation
+                    +swiper-navigation()
+        .categories-footer
+            +cta-button("Poproś o wycenę", "secondary")(class="btn-icon-tel")

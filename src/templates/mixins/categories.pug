@@ -1,0 +1,6 @@
+mixin categories(categories)
+    .categories-navigation
+        .categories-navigation-swiper
+            .swiper-wrapper.row.row-cols-2.row-cols-lg-4
+                each category in categories
+                    button.category-btn.swiper-slide.col.btn.btn-white.btn-rounded.btn-small(type="button")= category

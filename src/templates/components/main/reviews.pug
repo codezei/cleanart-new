@@ -1,0 +1,38 @@
+section.reviews#reviews.bg-light.js-observe.block
+    .container.custom-container
+        +headings('Opinie', 'Opinie naszych klientów', 'Zobacz, jak klienci oceniają wykonane przez nas usługi')
+        +categories(['Tapicerka meblowa', 'Materace', 'Dywany', 'Tapicerka samochodowa'])
+        .categories-content
+            .swiper.categories-content-swiper(data-auto-height="true")
+                .swiper-wrapper
+                    article.swiper-slide
+                        //- div.row-dynamic-wrapper
+                        h3.categories-content__title Opinie o <span class="text-accent">praniu tapicerki meblowej</span>
+                        .row.row-cols-md-2.row-cols-lg-3.row-cols-xl-4
+                            //- .row.row-cols-1.row-cols-sm-2.row-cols-md-2.row-cols-lg-3.row-cols-xl-4.row-cols-xxl-4.row-dynamic.js-toggle(data-target=".row-dynamic-btn")
+                            each review, i in reviews.furniture
+                                +review(review.name, review.rating, review.date, review.text)(class="col animate-fade-in" style=`--i: ${i};`)
+                            //- .w-100
+                            //-     button.row-dynamic-btn.btn-link.swiper-height-update
+                            //-         span.in-active-none Pokaż wszystkie opinie
+                            //-         span.in-inactive-none Ukryj
+                    article.swiper-slide
+                        h3.categories-content__title Opinie o <span class="text-accent">czyszczeniu materacy</span>
+                        .row.row-cols-md-2.row-cols-lg-3.row-cols-xl-4
+                            each review, i in reviews.mattress
+                                +review(review.name, review.rating, review.date, review.text)(class="col animate-fade-in" style=`--i: ${i};`)
+                    article.swiper-slide
+                        h3.categories-content__title Opinie o <span class="text-accent">praniu dywanów</span>
+                        .row.row-cols-md-2.row-cols-lg-3.row-cols-xl-4
+                            each review, i in reviews.carpet
+                                +review(review.name, review.rating, review.date, review.text)(class="col animate-fade-in" style=`--i: ${i};`)
+                    article.swiper-slide
+                        h3.categories-content__title Opinie o <span class="text-accent">praniu tapicerki samochodowej</span>
+                        .row.row-cols-md-2.row-cols-lg-3.row-cols-xl-4
+                            each review, i in reviews.salon
+                                +review(review.name, review.rating, review.date, review.text)(class="col animate-fade-in" style=`--i: ${i};`)
+                .categories-content-navigation
+                    //- +cta-button()
+                    +swiper-navigation()
+        .categories-footer
+            +cta-button("Chcę taką samą jakość", "secondary")(class="btn-icon-tel")

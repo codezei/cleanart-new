@@ -1,0 +1,20 @@
+mixin gallery(images, indexes, srText)
+    .row.row-cols-2.row-cols-md-4.row-cols-xl-4.gallery
+        each num in indexes
+            - const image = images[num - 1]
+            if image
+                a.col.animate-fade-in(
+                    href=`${image.src}.webp`
+                    style=`--i: ${num};`
+                )
+                    span.sr-only= srText
+                    picture.work.card.card-fade
+                        source(
+                            srcset=`${image.src}.webp`
+                            type="image/webp"
+                        )
+                        img.work__img(
+                            loading="lazy"
+                            src=`${image.src}.jpg`
+                            alt=image.alt
+                        )

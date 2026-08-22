@@ -1,0 +1,13 @@
+section.promo#promo.bg-light
+    .container.custom-container.block.promo-grid
+        .promo-grid__header
+            .pre-title Czyszczenie tapicerki samochodowej
+            h1.h1.promo__title.text-uppercase.title Pranie tapicerki samochodowej —
+                |&nbsp;
+                +cities()
+            p.h6.promo__subtitle.subtitle.text-light Pranie tapicerki samochodowej obejmuje fotele, kanapę, boczki drzwi, podsufitkę, bagażnik i inne elementy wnętrza auta. Usuwamy plamy, kurz, sierść i nieprzyjemne zapachy, dobierając metodę czyszczenia do rodzaju materiału.
+        .promo-grid__body
+            .main-beer-slider
+                +slider('salon-2', "Tapicerka samochodowa przed czyszczeniem", "Tapicerka samochodowa po czyszczeniu - efekt prania")(fetchpriority="high")
+        .promo-grid__footer
+            +cta-button("Zamów tapicerki samochodowej", "secondary")(class="btn-icon-tel")

@@ -1,0 +1,14 @@
+section.promo#promo.bg-light
+    .container.custom-container.block.promo-grid
+        .promo-grid__header
+            .pre-title Czyszczenie materacy
+            h1.h1.promo__title.text-uppercase.title Pranie materacy —
+                |&nbsp;
+                +cities()
+            //- h2 Profesjonalne czyszczenie materaca we Wrocławiu
+            p.h6.promo__subtitle.subtitle.text-light Pranie materacy jedno- i dwuosobowych pomagamy przeprowadzić dokładnie i bezpiecznie. Usuwamy plamy, pot, kurz, roztocza i nieprzyjemne zapachy, dobierając sposób czyszczenia do rodzaju materiału, konstrukcji i stopnia zabrudzenia.
+        .promo-grid__body
+            .main-beer-slider
+                +slider('mattress-2', "Materac przed praniem", "Materac po praniu - efekt czyszczenia")(fetchpriority="high")
+        .promo-grid__footer
+            +cta-button("Zamów pranie materaca", "secondary")(class="btn-icon-tel")

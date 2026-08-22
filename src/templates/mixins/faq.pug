@@ -1,0 +1,15 @@
+mixin faq(question, answer)
+    .card.js-toggle.card-white(data-target="", data-collapse=".js-collapse")&attributes(attributes)
+        div
+            .card__header.card__row
+                h3.h6.card__title.mb-0= question
+                div
+                    svg.icon.in-active-none(width="16" height="16")
+                        use(href="#plus")
+                    svg.icon.in-inactive-none(width="16" height="16")
+                        use(href="#minus")
+                    span.sr-only Перемкнути відповідь
+            .card__body.js-collapse.lh-0
+                p.card__text
+                    br
+                    span= answer

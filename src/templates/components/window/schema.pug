@@ -1,0 +1,107 @@
+script(type="application/ld+json").
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Strona główna",
+                        "item": "https://onyclean.pl/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Mycie okien",
+                        "item": "https://onyclean.pl/mycie-okien.html"
+                    }
+                ]
+            },
+            {
+                "@type": "Service",
+                "name": "Mycie okien",
+                "serviceType": "Mycie szyb, ram i parapetów",
+                "description": "Profesjonalne mycie okien w Nysie, Głuchołazach i Otmuchowie: szyby, ramy, parapety. Pracujemy szybko, dokładnie i bez smug.",
+                "areaServed": [
+                    {
+                        "@type": "City",
+                        "name": "Nysa"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Głuchołazy"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Otmuchów"
+                    }
+                ],
+                "provider": {
+                    "@type": "ProfessionalService",
+                    "name": "Ony Clean",
+                    "url": "https://onyclean.pl",
+                    "telephone": "+48884412928",
+                    "email": "top.tap@wp.pl",
+                    "priceRange": "PLN",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Nysa",
+                        "addressCountry": "PL"
+                    },
+                    "sameAs": [
+                        "https://www.facebook.com/profile.php?id=61558390682562",
+                        "https://www.tiktok.com/@toptapclean?_t=8lieXgIxd56&_r=1",
+                        "https://goo.gl/maps/A5t7SypU83NrAAxQA"
+                    ]
+                },
+                "availableChannel": {
+                    "@type": "ServiceChannel",
+                    "servicePhone": {
+                        "@type": "ContactPoint",
+                        "telephone": "+48884412928",
+                        "contactType": "customer service",
+                        "areaServed": "PL"
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Jak często warto myć okna w domu lub biurze?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Zaleca się mycie okien przynajmniej 2–3 razy w roku. Wiosną i jesienią to najlepszy czas, aby usunąć kurz, pył i osady po deszczu. W przypadku biur lub lokali przy ruchliwych ulicach mycie okien można wykonywać częściej — nawet co 1–2 miesiące."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Czy używacie środków bezpiecznych dla szyb i ram okiennych?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Tak, stosujemy tylko profesjonalne i ekologiczne środki czyszczące. Nie pozostawiają smug, nie niszczą ram (drewnianych, aluminiowych, PCV) i są bezpieczne dla domowników oraz zwierząt."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Czy mycie obejmuje również ramy i parapety?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Tak. Usługa obejmuje mycie szyb, ram, uszczelek i parapetów, dzięki czemu całe okno jest dokładnie wyczyszczone."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Czy oferujecie mycie okien na wysokości?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Tak, wykonujemy mycie okien również na wysokości z użyciem odpowiedniego sprzętu. Posiadamy doświadczenie i zabezpieczenia do pracy w trudno dostępnych miejscach — np. na klatkach schodowych, w biurowcach czy na fasadach szklanych."
+                        }
+                    }
+                ]
+            }
+        ]
+    }

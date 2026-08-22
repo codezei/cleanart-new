@@ -1,0 +1,58 @@
+extends settings/layout
+
+prepend html
+    - const lang = "pl";
+
+prepend head
+    - const pageTitle = "Mycie okien w Nysie"
+    - const pageDescription = "Profesjonalne mycie okien. Dokładne czyszczenie szyb, ram i parapetów bez smug. Dojazd do klienta."
+    - const pageKeywords = ""
+    - const pageUrl = "mycie-okien.html"
+    - const pageImage = "img/logo-big.webp"
+    - const twitterImage = "img/logo-big.webp"
+    - const themeColor = "#ffffff"
+
+
+append head
+    meta(name="robots" content="index, follow")
+    link(rel="preload" as="image" href="img/window-before-mob.webp" type="image/webp" media="(max-width: 575px)" fetchpriority="high")
+    link(rel="preload" as="image" href="img/window-after-mob.webp" type="image/webp" media="(max-width: 575px)" fetchpriority="high")
+    link(rel="preload" href="fonts/cormorant-garamond-v20-latin-ext-300.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/cormorant-garamond-v20-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin)
+    include components/window/schema
+
+
+
+append content
+    include mixins/cta-button
+    include mixins/cta-messengers
+    include mixins/swiper-navigation
+    include mixins/schedule
+    include mixins/faq
+    include mixins/review
+    include mixins/cities
+    include mixins/gallery
+    include mixins/categories
+    include mixins/headings
+    include mixins/price
+    include mixins/slider
+
+    include data/prices
+    include data/reviews
+    include data/faqs
+    include components/header
+    main
+        include components/window/promo
+        include components/window/process
+        include components/window/price
+        include components/window/reviews
+        include components/window/works
+        include components/window/cta
+        include components/window/faq
+        include components/contacts
+
+        include components/popup
+        include components/icons
+    include components/footer
+
+append scripts

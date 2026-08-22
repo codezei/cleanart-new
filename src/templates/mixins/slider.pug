@@ -1,0 +1,14 @@
+mixin slider(category, altBefore = "", altAfter = "")
+    .beer-slider-wrapper
+        .beer-slider(id=`${category}-slider` data-beer-label="Po")
+            picture
+                source(type="image/webp" srcset=`img/process/${category}-after-mob.webp` media="(max-width: 430px)")
+                source(srcset=`img/process/${category}-after-mob.png` media="(max-width: 430px)")
+                source(type="image/webp" srcset=`img/process/${category}-after.webp`)
+                img(src=`img/process/${category}-after.png` alt=altAfter)&attributes(attributes)
+            .beer-reveal(data-beer-label="Przed")
+                picture
+                    source(type="image/webp" srcset=`img/process/${category}-before-mob.webp` media="(max-width: 430px)")
+                    source(srcset=`img/process/${category}-before-mob.png` media="(max-width: 430px)")
+                    source(type="image/webp" srcset=`img/process/${category}-before.webp`)
+                    img(src=`img/process/${category}-before.png` alt=altBefore)&attributes(attributes)

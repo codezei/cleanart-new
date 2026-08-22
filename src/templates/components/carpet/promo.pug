@@ -1,0 +1,13 @@
+section.promo#promo.bg-light
+    .container.custom-container.block.promo-grid
+        .promo-grid__header
+            .pre-title Pranie dywanów
+            h1.h1.promo__title.text-uppercase.title Pranie dywanów i wykładzin —
+                |&nbsp;
+                +cities()
+            p.h6.promo__subtitle.subtitle.text-light Czyścimy dywany i wykładziny w domach, mieszkaniach i innych obiektach. Usuwamy plamy, kurz, sierść oraz nieprzyjemne zapachy, dobierając sposób czyszczenia do rodzaju włókien i stopnia zabrudzenia.
+        .promo-grid__body
+            .main-beer-slider
+                +slider('carpet-2', "Dywan przed praniem", "Dywan po praniu - efekt czyszczenia")
+        .promo-grid__footer
+            +cta-button("Zamów pranie dywanu", "secondary")(class="btn-icon-tel")

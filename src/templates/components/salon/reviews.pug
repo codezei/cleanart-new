@@ -1,0 +1,8 @@
+section.reviews.block#reviews.bg-light.js-observe
+    .container
+        +headings('Opinie klientów', 'Co klienci mówią o praniu tapicerki samochodowej?', 'Zobacz opinie osób, które skorzystały z usługi prania tapicerki samochodowej i czyszczenia wnętrza auta.')
+        .row.row-cols-sm-2.row-cols-lg-3.row-cols-xl-4
+            each review, i in reviews.salon
+                +review(review.name, review.rating, review.date, review.text)(class="col animate-fade-in" style=`--i: ${i};`)
+        p.text-center
+            +cta-button("Chcę taką samą jakość", "secondary")(class="btn-icon-tel")

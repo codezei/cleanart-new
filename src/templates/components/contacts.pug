@@ -1,0 +1,15 @@
+section#contacts.contacts.block.bg.bg-light.js-observe
+    .container
+        +headings('Skontaktuj się z nami', 'Kontakt', 'Zamów profesjonalne pranie tapicerki z dojazdem')
+        .contacts__iframe(data-src="https://www.google.com/maps/d/embed?mid=1OgTUPwG-tgbS5B1JYIp1UKFyKrxGCRQ&ehbc=2E312F&noprof=1")
+        .row.row-cols-md-3
+            .col.card.card-white
+                h3.h6 Obszary które obsługujemy
+                p Wrocław, Oleśnica, Trzebnica, Oborniki Śląskie, Żmigród, Milicz, Brzeg Dolny, Wołów, Rawicz i okolice tych miast
+            .col.card.card-white
+                h3.h6 Portale społecznościowe
+                include socials
+            .col.card.card-white
+                h3.h6 Godziny pracy
+                p
+                    +schedule()

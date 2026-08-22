@@ -1,0 +1,22 @@
+.socials {
+    display: inline-flex;
+    // justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    &__item {
+        text-decoration: none;
+        color: inherit;
+        flex-shrink: 0;
+        // padding: 0 0.5rem;
+        // display: inline-block;
+        transition: all 400ms;
+        line-height: 1;
+        &:hover {
+            transform: scale(1.1);
+        }
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}

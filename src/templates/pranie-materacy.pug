@@ -1,0 +1,58 @@
+extends settings/layout
+
+prepend html
+    - const lang = "pl";
+
+prepend head
+    - const pageTitle = "Pranie materacy Wrocław | CleanArt"
+    - const pageDescription = "Pranie i czyszczenie materacy we Wrocławiu z dojazdem do klienta. Usuwamy plamy, pot, kurz, zabrudzenia i nieprzyjemne zapachy."
+    - const pageKeywords = ""
+    - const pageUrl = "pranie-materacy.html"
+    - const pageImage = "img/mattress/mattress-img-1.webp"
+    - const twitterImage = "img/mattress/mattress-img-1.webp"
+    - const themeColor = "#ffffff"
+
+
+append head
+    meta(name="robots" content="index, follow")
+    link(rel="preload" as="image" href="img/mattress-2-before-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
+    link(rel="preload" as="image" href="img/mattress-2-after-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
+    link(rel="preload" href="fonts/montserrat-v31-latin-ext-300.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/montserrat-v31-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin)
+    include components/mattress/schema
+
+
+append content
+    include mixins/cta-button
+    include mixins/cta-messengers
+    include mixins/swiper-navigation
+    include mixins/schedule
+    include mixins/faq
+    include mixins/review
+    include mixins/cities
+    include mixins/gallery
+    include mixins/categories
+    include mixins/headings
+    include mixins/price
+    include mixins/slider
+
+    include data/prices
+    include data/reviews
+    include data/faqs
+    include data/works
+    include components/header
+    main
+        include components/mattress/promo
+        include components/mattress/price
+        include components/mattress/process
+        include components/mattress/reviews
+        include components/mattress/works
+        include components/mattress/cta
+        include components/mattress/faq
+        include components/contacts
+
+        include components/popup
+        include components/icons
+    include components/footer
+
+append scripts

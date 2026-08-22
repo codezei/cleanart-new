@@ -1,0 +1,18 @@
+section.reviews.block#reviews.bg.bg-light.js-observe
+    .container
+        +headings('Opinie klientów', 'Co klienci mówią o myciu okien?', 'Poznaj opinie klientów po wykonaniu usługi mycia okien')
+        .row.row-cols-sm-2.row-cols-lg-3.row-cols-xl-4
+            each review, i in reviews.window
+                +review(review.name, review.rating, review.date, review.text)(class="col animate-fade-in" style=`--i: ${i};`)
+            //- .w-100.text-center
+            //-     button.row-dynamic-btn.btn-link
+            //-         span.in-active-none Pokaż wszystkie opinie
+            //-         span.in-inactive-none Ukryj
+            p
+                span 5.0 / 5.0
+                | &nbsp;•&nbsp;
+                span.rating(style="--star-rating: 5;")
+                | &nbsp;•&nbsp;
+                a.link(href="https://goo.gl/maps/A5t7SypU83NrAAxQA" target="_blank") (41 opinii w Google)
+                | &nbsp;
+                span Wszystkie opinie pochodzą od naszych klientów. Zostaw również swoją opinię na Google

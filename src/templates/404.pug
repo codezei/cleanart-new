@@ -1,0 +1,30 @@
+extends settings/layout
+
+prepend html
+    - const lang = "pl";
+
+prepend head
+    - const pageTitle = "Strona nie została znaleziona"
+    - const themeColor = "#ffffff"
+    - const pageDescription = "Strona, której szukasz, nie istnieje lub została przeniesiona. Wróć na stronę główną i znajdź interesującą Cię usługę."
+    - const pageKeywords = ""
+    - const pageUrl = "";
+    - const pageImage = "img/logo-big.webp";
+    - const twitterImage = "img/logo-big.webp";
+
+append head
+    meta(name="robots" content="noindex, follow")
+
+
+append content
+    include mixins/cta-button
+    include mixins/cta-messengers
+    include mixins/schedule
+    include mixins/cities
+    include components/header
+    main
+        include components/404
+        include components/icons
+    include components/footer
+
+append scripts

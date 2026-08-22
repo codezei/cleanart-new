@@ -1,0 +1,223 @@
+.btn {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    background-size: 100%;
+    background-position: left center;
+    // white-space: nowrap;
+    text-align: center;
+    border-radius: var(--btn-radius, 50rem);
+    transition: all 400ms;
+    gap: 0.5rem;
+    padding: 1em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 8px 16px color-mix(in srgb, var(--btn-shadow) 40%, transparent), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+
+    &-text {
+        margin-left: 1em;
+    }
+
+
+    &[class*="-icon-"] {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+
+        &:after {
+            content: "";
+            display: block;
+            height: 2em;
+            width: 2em;
+            border-radius: 50%;
+            background-color: var(--btn-icon-bg, #ffffff50);
+            background-size: calc(100% - 1rem);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &-icon {
+        &-tel {
+            &:after {
+                background-image: url(../img/tel.svg);
+                /* Додаємо анімацію */
+                animation: pulseRipple 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+                will-change: transform, box-shadow;
+            }
+        }
+
+        &-arrow-right {
+            padding-left: 0.5em;
+
+            &:after {
+                background-image: url(../img/chevron-right.svg);
+            }
+        }
+
+        &-arrow-left {
+            padding-left: 0.5em;
+
+            &:after {
+                background-image: url(../img/chevron-left.svg);
+            }
+        }
+    }
+
+
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 20px var(--btn-shadow), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+            background-size: 150%;
+        }
+    }
+
+    &:active {
+        transform: translateY(0) scale(0.95) !important;
+    }
+
+    &-primary {
+        --btn-text: #fff;
+        --btn-bg: var(--gradient-1);
+        --btn-shadow: color-mix(in srgb, var(--color-1-base) 40%, transparent);
+
+        &:hover {
+
+        }
+
+        &.active,
+        .active &,
+        .swiper-slide-thumb-active & {
+
+        }
+    }
+
+    &-secondary {
+        --btn-text: #fff;
+        --btn-bg: var(--gradient-2);
+        --btn-shadow: color-mix(in srgb, var(--color-2-base) 40%, transparent);
+        text-shadow: 1px 1px rgba(0,0,0,0.2);
+
+        &:hover {
+
+        }
+
+        &.active,
+        .active &,
+        .swiper-slide-thumb-active & {}
+    }
+
+
+    &-cta {
+        --btn-text: #fff;
+        --btn-bg: var(--gradient-3);
+        --btn-shadow: color-mix(in srgb, var(--color-3-base) 40%, transparent);
+
+
+        &:hover {
+
+        }
+
+        &.active,
+        .active &,
+        .swiper-slide-thumb-active & {}
+    }
+
+
+    &-white {
+        --btn-bg: #fff;
+        --btn-text: var(--color-1-shade-3);
+        --btn-shadow: color-mix(in srgb, var(--color-1-shade-2) 30%, transparent);
+        --btn-icon-bg: color-mix(in srgb, var(--color-1-shade-1) 50%, #fff);
+        border: 1px solid rgba($color: #000000, $alpha: 0.05);
+        &:hover {
+            --btn-bg: color-mix(in srgb, var(--color-1-shade-1) 2%, transparent);
+        }
+
+        &.active,
+            .active &,
+            &.swiper-slide-thumb-active  {
+                // --btn-text: #fff;
+                --btn-bg: color-mix(in srgb, var(--color-1-shade-1) 40%, #fff);
+            }
+    }
+
+
+
+    &-transparent {
+        background: transparent;
+        color: inherit;
+        border: none;
+    }
+
+    &-large {
+        font-size: 1.25rem;
+    }
+
+    &-normal {
+        font-size: 1rem;
+    }
+
+    &-small {
+        font-size: 0.75rem;
+    }
+
+    &-rounded {
+        --btn-radius: 0.5em;
+    }
+
+}
+
+
+
+
+@keyframes pulseRipple {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+
+    70% {
+        transform: scale(1.08);
+        /* Тінь розширюється і розмивається */
+        box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+
+.btn-link {
+    color: var(--text-accent);
+    text-decoration: underline;
+    position: relative;
+    background: transparent;
+    border: none;
+    outline: none;
+
+    &:after {
+        content: ">>";
+        position: absolute;
+        left: calc(100% + 0.5rem);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

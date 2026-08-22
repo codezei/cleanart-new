@@ -1,0 +1,44 @@
+
+.services {
+    overflow: hidden;
+    &-swiper {
+        overflow: visible;
+        position: relative;
+        // &:before, &:after {
+        //     content: "";
+        //     display: block;
+        //     width: calc(100vw - var(--container-width));
+        //     height: 100%;
+        //     position: absolute;
+        //     top: 0;
+        //     pointer-events: none;
+        //     z-index: 3;
+        // }
+        // &:before {
+        //     right: 100%;
+        //     background: linear-gradient(to left,  #f1f0f820 0%, #f1f0f8 50%);
+        // }
+        // &:after {
+        //     left: 100%;
+        //     background: linear-gradient(to right, #f1f0f820 0%, #f1f0f8 50%);
+        // }
+        .swiper-wrapper {
+            height: auto;
+        }
+        .swiper-slide {
+            height: auto;
+        }
+        .swiper-pagination {
+            position: static;
+            width: auto;
+        }
+
+    }
+                .swiper-navigation {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 0.5rem;
+                    margin-top: 1rem    ;
+                }
+}

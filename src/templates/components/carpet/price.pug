@@ -1,0 +1,15 @@
+section#price.price.bg.bg-wave.js-observe.block
+    .container.custom-container.default-grid
+        .default-grid__header
+            +headings('Cennik', 'Ile kosztuje pranie dywanów i wykładzin we Wrocławiu?', 'Sprawdź ceny prania dywanów oraz wykładzin o różnej powierzchni.')
+        .default-grid__body
+            .row.row-cols-sm-2.row-cols-xl-3
+                each price, i in prices.carpet
+                    +price(price.name, price.value)(class="col animate-fade-in" style=`--i: ${i};`)
+            p.text-small.text-italic
+                span.d-ib * Cena dotyczy czyszczenia jednej strony materaca.
+                |&nbsp;
+                span.d-ib * Ceny mogą się różnić w zależności od stopnia zabrudzenia. Minimalna kwota zamówienia z dojazdem do klienta: od 230 zł
+        .default-grid__footer
+            +cta-button()(class="btn-icon-tel")
+            //- +cta-messengers()

@@ -1,0 +1,58 @@
+extends settings/layout
+
+prepend html
+    - const lang = "pl";
+
+prepend head
+    - const pageTitle = "Pranie tapicerki meblowej Wrocław | CleanArt"
+    - const pageDescription = "Pranie i czyszczenie tapicerki meblowej we Wrocławiu. Kanapy, narożniki, sofy, fotele, krzesła i meble skórzane z dojazdem do klienta."
+    - const pageKeywords = ""
+    - const pageUrl = "pranie-tapicerki-meblowej.html"
+    - const pageImage = "img/furniture/furniture-img-11.webp"
+    - const twitterImage = "img/furniture/furniture-img-11.webp"
+    - const themeColor = "#ffffff"
+
+
+append head
+    meta(name="robots" content="index, follow")
+    link(rel="preload" as="image" href="img/sofa-2-before-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
+    link(rel="preload" as="image" href="img/sofa-2-after-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
+    link(rel="preload" href="fonts/montserrat-v31-latin-ext-300.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/montserrat-v31-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin)
+    include components/furniture/schema
+
+
+append content
+    include mixins/cta-button
+    include mixins/cta-messengers
+    include mixins/swiper-navigation
+    include mixins/schedule
+    include mixins/faq
+    include mixins/review
+    include mixins/cities
+    include mixins/gallery
+    include mixins/categories
+    include mixins/headings
+    include mixins/price
+    include mixins/slider
+
+    include data/prices
+    include data/reviews
+    include data/faqs
+    include data/works
+    include components/header
+    main
+        include components/furniture/promo
+        include components/furniture/price
+        include components/furniture/process
+        include components/furniture/reviews
+        include components/furniture/works
+        include components/furniture/cta
+        include components/furniture/faq
+        include components/contacts
+
+        include components/popup
+        include components/icons
+    include components/footer
+
+append scripts

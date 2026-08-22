@@ -1,0 +1,11 @@
+section.faq#faq.bg.bg-dark.js-observe
+    .container.block.custom-container.default-grid
+        .default-grid__header
+            +headings('FAQ', 'Najczęściej zadawane pytania', 'Sprawdź najważniejsze informacje dotyczące prania i czyszczenia oraz przygotowania do usługi')
+        .default-grid__body
+            .row
+                each faq, i in faqs.window
+                    +faq(faq.question, faq.answer)(class="col animate-fade-in" style=`--i:${i};`)
+        .default-grid__footer
+            +cta-button()
+            +cta-messengers()

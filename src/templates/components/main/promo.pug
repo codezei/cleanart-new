@@ -1,0 +1,32 @@
+section.promo#promo.bg.bg-light
+    .container.custom-container.block.promo-grid
+        .promo-grid__header
+            .pre-title Czyszczenie ekstrakcyjne
+            h1.h1.promo__title.text-uppercase.title Pranie tapicerki, materacy i dywanów —
+                |&nbsp;
+                +cities()
+            p.promo__subtitle.subtitle.h6.text-light Oferujemy profesjonalne pranie i czyszczenie tapicerki we Wrocławiu i okolicach. Czyścimy meble tapicerowane i skórzane, materace, dywany, wykładziny oraz tapicerkę samochodową, z dojazdem do klienta.
+        .promo-grid__body
+            .main-beer-slider
+                +slider("main-sofa", "Narożnik i dywan przed praniem", "Narożnik i dywan po praniu - efekt czyszczenia")(fetchpriority="high")
+            .row.row-cols-3.promo__list
+                .promo__list-item.col.card.card-white.card-small
+                    .card__header.card__row
+                        .card__icon
+                            svg(width="24" height="24")
+                                use(href="#effective")
+                        .card__title Usuwanie 99% plam i zapachów
+                .promo__list-item.col.card.card-white.card-small
+                    .card__header.card__row
+                        .card__icon
+                            svg(width="24" height="24")
+                                use(href="#intime")
+                        .card__title Szybki dojazd we Wrocławiu
+                .promo__list-item.col.card.card-white.card-small
+                    .card__header.card__row
+                        .card__icon
+                            svg(width="24" height="24")
+                                use(href="#safe")
+                        .card__title Bezpieczne dla dzieci i zwierząt
+        .promo-grid__footer
+            +cta-button("ZADZWOŃ I UMÓW TERMIN", "secondary")(class="btn-icon-tel")

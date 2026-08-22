@@ -1,0 +1,19 @@
+section.promo#promo.bg.bg-dark
+    .container.custom-container.block.promo-grid
+        .promo-grid__header
+            .pre-title Mycie okien
+            h1.h1.promo__title.text-uppercase.title Mycie okien
+                |&nbsp;
+                +cities("Nysa")
+            p.h5.promo__subtitle.subtitle.text-light Myjemy szyby, ramy, parapety i trudno dostępne powierzchnie w domach oraz innych obiektach.
+                //- | Usługi wykonujemy również w <strong>Nysie, Głuchołazach i Otmuchowie</strong>.
+            nav
+                a.link(href="#price") Cennik
+                |&nbsp;•&nbsp;
+                a.link(href="#reviews") Opinie
+                |&nbsp;•&nbsp;
+                a.link(href="#works") Nasze realizacje
+        .promo-grid__body
+            +slider('window', "Okna przed myciem", "Okna po myciu - efekt czyszczenia")(fetchpriority="high")
+        .promo-grid__footer
+            +cta-button("Zamów mycie okien", "secondary")(class="btn-icon-tel")

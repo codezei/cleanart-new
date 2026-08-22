@@ -1,0 +1,37 @@
+section.why#why.bg.bg-wave.js-observe
+    .container.block.custom-container.default-grid
+        .default-grid__header
+            +headings('Jak to działa', 'Jak wygląda współpraca?', 'Zobacz, co dzieje się od momentu kontaktu do zakończenia usługi.')
+        .default-grid__body
+            .row.row-cols-sm-2
+                .col.card.card-white.card-column.animate-fade-in(style="--i: 0;")
+                    .card__header.card__row
+                        .card__icon(data-number="1")
+                        h3.h5.card__title Skontaktuj się z nami
+                    .card__body
+
+                        p.card__text.text-muted Omówimy szczegóły Twojego zamówienia, ustalając datę, godzinę i adres realizacji usługi
+                .col.card.card-white.card-column.animate-fade-in(style="--i: 1;")
+                    .card__header.card__row
+                        .card__icon(data-number="2")
+                        h3.h5.card__title Realizacja zamówienia
+                    .card__body
+
+                        p.card__text.text-muted W dniu realizacji nasz specjalista przywiezie cały niezbędny sprzęt i środki czyszczące, a następnie wykona usługę
+                .col.card.card-white.card-column.animate-fade-in(style="--i: 2;")
+                    .card__header.card__row
+                        .card__icon(data-number="3")
+                        h3.h5.card__title Płatność
+                    .card__body
+
+                        p.card__text.text-muted Po zakończeniu pracy dokonasz płatności w dogodny dla Ciebie sposób
+                .col.card.card-white.card-column.animate-fade-in(style="--i: 3;")
+                    .card__header.card__row
+                        .card__icon(data-number="4")
+                        h3.h5.card__title Gotowe
+                    .card__body
+
+                        p.card__text.text-muted Teraz pozostaje tylko cieszyć się efektem czyszczenia!
+        .default-grid__footer
+            +cta-button()(class="btn-icon-tel")
+            //- +cta-messengers()

@@ -1,0 +1,41 @@
+header.header
+    .container
+        .header__inner
+            .header__logo
+                a(href="/")
+                    include logo
+            address.header__address Wrocław i okolice
+                br
+                +schedule()
+            .header__menu#main-menu
+                nav.menu
+                    .menu__item
+                        a.menu__link(href="#services") Usługi
+                        nav.menu
+                            .menu__item
+                                a.menu__link(href="./pranie-tapicerki-meblowej.html") Pranie tapicerki meblowej
+                            .menu__item
+                                a.menu__link(href="./pranie-materacy.html") Pranie materacy
+                            .menu__item
+                                a.menu__link(href="./pranie-dywanow.html") Pranie dywanow
+                            .menu__item
+                                a.menu__link(href="./pranie-tapicerki-samochodowej.html") Pranie tapicerki samochodowej
+                    .menu__item
+                        a.menu__link(href="#price") Cennik
+                    .menu__item
+                        a.menu__link(href="#reviews") Opinie
+                    .menu__item
+                        a.menu__link(href="#works") Realizacje
+                //- .header__menu-socials.text-center
+                    //- +cta-messengers()
+                .header__menu-btn.text-center
+                    a.btn.btn-transparent.btn-small(href="tel:+48884412928")
+                        span.btn-text Zadzwoń
+                        span.btn.btn-primary.btn-icon-tel
+            .header__burger
+                button.js-burger.btn.btn-transparent(type="button" aria-expanded="false" aria-controls="main-menu")
+                    span.sr-only Otwórz menu mobilne
+                    span.cross
+                        span
+                        span
+                        span

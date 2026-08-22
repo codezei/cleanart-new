@@ -1,0 +1,61 @@
+extends settings/layout
+
+prepend html
+    - const lang = "pl";
+
+prepend head
+    - const pageTitle = "Pranie tapicerki, materacy, dywanów — Wrocław i okolice"
+    - const themeColor = "#ffffff"
+    - const pageDescription = "Profesjonalne pranie tapicerki we Wrocławiu i okolicach. Czyścimy kanapy, narożniki, materace, dywany, wykładziny i tapicerkę samochodową z dojazdem do klienta."
+    - const pageKeywords = ""
+    - const pageUrl = "";
+    - const pageImage = "img/furniture/furniture-img-1.webp";
+    - const twitterImage = "img/furniture/furniture-img-1.webp";
+
+append head
+    meta(name="robots" content="index, follow")
+    link(rel="preload" as="image" href="img/main-sofa-before-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
+    link(rel="preload" as="image" href="img/main-sofa-after-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
+    link(rel="preload" href="fonts/montserrat-v31-latin-ext-300.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/montserrat-v31-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin)
+    include components/main/schema
+
+
+append content
+    include mixins/cta-button
+    include mixins/cta-messengers
+    include mixins/swiper-navigation
+    include mixins/schedule
+    include mixins/faq
+    include mixins/review
+    include mixins/cities
+    include mixins/gallery
+    include mixins/categories
+    include mixins/headings
+    include mixins/price
+    include mixins/slider
+
+    include data/prices
+    include data/reviews
+    include data/faqs
+    include data/works
+    include components/header
+    main
+        include components/main/promo
+        include components/services
+        include components/about
+        hr
+        include components/main/process
+        include components/why
+        include components/main/price
+        include components/how
+        include components/main/works
+        include components/main/cta
+        include components/main/reviews
+        include components/main/faq
+        include components/contacts
+        include components/popup
+        include components/icons
+    include components/footer
+
+append scripts

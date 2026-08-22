@@ -1,0 +1,11 @@
+section#price.price.bg.bg-dark.js-observe
+    .container.custom-container.block.default-grid
+        .default-grid__header
+            +headings('Cennik usług', 'Ile kosztuje mycie okien?', 'Sprawdź ceny mycia okien i zakres prac wykonywanych podczas usługi')
+        .default-grid__body
+            .row.row-cols-sm-2.row-cols-xl-3
+                each price, i in prices.window
+                    +price(price.name, price.value)(class="col animate-fade-in" style=`--i: ${i};`)
+        .default-grid__footer
+            +cta-button()
+            +cta-messengers()

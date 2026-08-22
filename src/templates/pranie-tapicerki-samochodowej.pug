@@ -1,0 +1,56 @@
+extends settings/layout
+
+prepend html
+    - const lang = "pl";
+
+prepend head
+    - const pageTitle = "Pranie tapicerki samochodowej Wrocław | CleanArt"
+    - const pageDescription = "Pranie tapicerki samochodowej we Wrocławiu z dojazdem do klienta. Czyścimy fotele, kanapę, boczki, podsufitkę i wnętrze auta, usuwając plamy i zapachy."
+    - const pageKeywords = ""
+    - const pageUrl = "pranie-tapicerki-samochodowej.html"
+    - const pageImage = "img/salon/salon-img-2.webp"
+    - const twitterImage = "img/salon/salon-img-2.webp"
+    - const themeColor = "#ffffff"
+
+append head
+    meta(name="robots" content="index, follow")
+    link(rel="preload" as="image" href="img/salon-2-before-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
+    link(rel="preload" as="image" href="img/salon-2-after-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
+    link(rel="preload" href="fonts/montserrat-v31-latin-ext-300.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/montserrat-v31-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin)
+    include components/salon/schema
+
+append content
+    include mixins/cta-button
+    include mixins/cta-messengers
+    include mixins/swiper-navigation
+    include mixins/schedule
+    include mixins/faq
+    include mixins/review
+    include mixins/cities
+    include mixins/gallery
+    include mixins/categories
+    include mixins/headings
+    include mixins/price
+    include mixins/slider
+
+    include data/prices
+    include data/reviews
+    include data/faqs
+    include data/works
+    include components/header
+    main
+        include components/salon/promo
+        include components/salon/price
+        include components/salon/process
+        include components/salon/reviews
+        include components/salon/works
+        include components/salon/cta
+        include components/salon/faq
+        include components/contacts
+
+        include components/popup
+        include components/icons
+    include components/footer
+
+append scripts

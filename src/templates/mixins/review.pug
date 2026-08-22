@@ -1,0 +1,19 @@
+mixin review(name, rating, date, text)
+    .card.card-column.card-white&attributes(attributes)
+        .card__header
+            .text-bold.h6.card__title.mb-0= name
+            .card__text
+                .rating(style=`--star-rating: ${rating};`)
+        .card__body
+            //- .card__text.text-muted= date
+            p.card__text= text
+        //- .card__footer
+        //-     button.js-target(type="button")
+        //-         span.in-active-none
+        //-             svg.icon.icon-right(width="16" height="16")
+        //-                 use(href="#eye")
+        //-             | Показати більше
+        //-         span.in-inactive-none
+        //-             svg.icon.icon-right(width="16" height="16")
+        //-                 use(href="#eye-close")
+        //-             | приховати

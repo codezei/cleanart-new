@@ -1,0 +1,176 @@
+script(type="application/ld+json").
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Strona główna",
+                        "item": "https://cleanart-wroclaw.pl/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Pranie dywanów i wykładzin",
+                        "item": "https://cleanart-wroclaw.pl/pranie-dywanow.html"
+                    }
+                ]
+            },
+            {
+                "@type": "Service",
+                "@id": "https://cleanart-wroclaw.pl/pranie-dywanow.html#service",
+                "name": "Pranie dywanów i wykładzin",
+                "serviceType": "Pranie i czyszczenie dywanów i wykładzin",
+                "description": "Profesjonalne pranie dywanów i wykładzin we Wrocławiu i okolicach. Usuwanie plam, kurzu, sierści i innych zabrudzeń z doborem metody czyszczenia do rodzaju włókien i materiału.",
+                "provider": {
+                    "@type": "ProfessionalService",
+                    "@id": "https://cleanart-wroclaw.pl/#business",
+                    "name": "CleanArt",
+                    "url": "https://cleanart-wroclaw.pl/",
+                    "telephone": "+48721587252",
+                    "email": "contact.cleanart.pro@gmail.com",
+                    "areaServed": [
+                        {
+                            "@type": "City",
+                            "name": "Wrocław"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Oleśnica"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Trzebnica"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Oborniki Śląskie"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Żmigród"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Milicz"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Brzeg Dolny"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Wołów"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Rawicz"
+                        }
+                    ],
+                    "openingHoursSpecification": [
+                        {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": [
+                                "Monday",
+                                "Tuesday",
+                                "Wednesday",
+                                "Thursday",
+                                "Friday",
+                                "Saturday",
+                                "Sunday"
+                            ],
+                            "opens": "06:00",
+                            "closes": "22:00"
+                        }
+                    ],
+                },
+                "areaServed": [
+                    {
+                        "@type": "City",
+                        "name": "Wrocław"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Oleśnica"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Trzebnica"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Oborniki Śląskie"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Żmigród"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Milicz"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Brzeg Dolny"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Wołów"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Rawicz"
+                    }
+                ],
+                "availableChannel": {
+                    "@type": "ServiceChannel",
+                    "servicePhone": {
+                        "@type": "ContactPoint",
+                        "telephone": "+48721587252",
+                        "contactType": "customer service",
+                        "areaServed": "PL"
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Jakie rodzaje dywanów i wykładzin czyścicie?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Czyścimy dywany wełniane, syntetyczne, z długim włosiem (shaggy), orientalne oraz wykładziny biurowe. Metodę prania dobieramy indywidualnie do rodzaju włókien i materiału."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Czy pranie dywanu usuwa sierść i zapach psa lub kota?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Tak. Specjalne szczotki i dedykowana neutralizacyjna chemia skutecznie wyciągają sierść wplątaną w runo oraz pomagają usunąć nieprzyjemne zapachy od zwierząt."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Jak długo schnie dywan po praniu ekstrakcyjnym?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Czas schnięcia wynosi zazwyczaj od 6 do 12 godzin. Przy mocno zbitym runie lub dużej wilgotności warto skorzystać z usługi przyspieszonego suszenia."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Czy pranie dywanów nie niszczy struktury materiału?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Nie. Profesjonalny sprzęt ekstrakcyjny kontroluje ciśnienie i ilość wody, dzięki czemu włókna są odpowiednio traktowane podczas prania."
+                        }
+                    }
+                ]
+            }
+        ]
+    }

@@ -1,0 +1,39 @@
+
+section#price.price.block.bg-light.js-observe
+    .container.custom-container
+        +headings('Cennik', 'Ceny naszych usług', 'Sprawdź ceny czyszczenia i wybierz zakres usługi odpowiedni do swoich potrzeb')
+        +categories(['Tapicerka meblowa', 'Materace', 'Dywany', 'Tapicerka samochodowa'])
+        .categories-content
+            .swiper.categories-content-swiper(data-auto-height="true")
+                .swiper-wrapper
+                    article.swiper-slide
+                        h3.categories-content__title Cennik <span class="text-accent">prania tapicerki meblowej</span>
+                        .row.row-cols-sm-2.row-cols-md-3.row-cols-xl-4
+                            each price, i in prices.furniture
+                                +price(price.name, price.value)(class="col animate-fade-in" style=`--i: ${i};`)
+                        //- p.text-small.text-italic * Czyszczenie mebli skórzanych +30% od standardowej ceny.
+                    article.swiper-slide
+                        h3.categories-content__title Cennik <span class="text-accent">prania materacy</span>
+                        .row.row-cols-sm-2.row-cols-md-3.row-cols-xl-4
+                            each price, i in prices.mattress
+                                +price(price.name, price.value)(class="col animate-fade-in" style=`--i: ${i};`)
+                    article.swiper-slide
+                        h3.categories-content__title Cennik <span class="text-accent">prania dywanów</span>
+                        .row.row-cols-sm-2.row-cols-md-3.row-cols-xl-4
+                            each price, i in prices.carpet
+                                +price(price.name, price.value)(class="col animate-fade-in" style=`--i: ${i};`)
+                    article.swiper-slide
+                        h3.categories-content__title Cennik <span class="text-accent">prania tapicerki samochodowej</span>
+                        .row.row-cols-sm-2.row-cols-md-3.row-cols-xl-4
+                            each price, i in prices.salon
+                                +price(price.name, price.value)(class="col animate-fade-in" style=`--i: ${i};`)
+                p.text-small.text-italic
+                    span.d-ib * Cena dotyczy czyszczenia jednej strony materaca.
+                    |&nbsp;
+                    span.d-ib * Ceny mogą się różnić w zależności od stopnia zabrudzenia. Minimalna kwota zamówienia z dojazdem do klienta: od 230 zł
+
+                .categories-content-navigation
+                    //- +cta-button()
+                    +swiper-navigation()
+        .categories-footer
+            +cta-button("Poproś o wycenę", "secondary")(class="btn-icon-tel")

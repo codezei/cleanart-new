@@ -1,0 +1,4 @@
+mixin cta-button(text='Zadzwoń', type='cta')
+    a.btn.btn-normal(class=`btn-${type}` href=`tel:+48721587252`)&attributes(attributes)
+        if text
+            span.btn-text #{text}

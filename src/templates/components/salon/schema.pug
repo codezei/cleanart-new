@@ -1,0 +1,176 @@
+script(type="application/ld+json").
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Strona główna",
+                        "item": "https://cleanart-wroclaw.pl/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Pranie tapicerki samochodowej",
+                        "item": "https://cleanart-wroclaw.pl/pranie-tapicerki-samochodowej.html"
+                    }
+                ]
+            },
+            {
+                "@type": "Service",
+                "@id": "https://cleanart-wroclaw.pl/pranie-tapicerki-samochodowej.html#service",
+                "name": "Pranie tapicerki samochodowej",
+                "serviceType": "Pranie i czyszczenie tapicerki samochodowej",
+                "description": "Profesjonalne pranie i czyszczenie tapicerki samochodowej we Wrocławiu i okolicach. Czyścimy fotele, kanapę, podsufitkę, boczki drzwiowe, podłogę, bagażnik i dywaniki.",
+                "provider": {
+                    "@type": "ProfessionalService",
+                    "@id": "https://cleanart-wroclaw.pl/#business",
+                    "name": "CleanArt",
+                    "url": "https://cleanart-wroclaw.pl/",
+                    "telephone": "+48721587252",
+                    "email": "contact.cleanart.pro@gmail.com",
+                    "areaServed": [
+                        {
+                            "@type": "City",
+                            "name": "Wrocław"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Oleśnica"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Trzebnica"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Oborniki Śląskie"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Żmigród"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Milicz"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Brzeg Dolny"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Wołów"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Rawicz"
+                        }
+                    ],
+                    "openingHoursSpecification": [
+                        {
+                            "@type": "OpeningHoursSpecification",
+                            "dayOfWeek": [
+                                "Monday",
+                                "Tuesday",
+                                "Wednesday",
+                                "Thursday",
+                                "Friday",
+                                "Saturday",
+                                "Sunday"
+                            ],
+                            "opens": "06:00",
+                            "closes": "22:00"
+                        }
+                    ]
+                },
+                "areaServed": [
+                    {
+                        "@type": "City",
+                        "name": "Wrocław"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Oleśnica"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Trzebnica"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Oborniki Śląskie"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Żmigród"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Milicz"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Brzeg Dolny"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Wołów"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Rawicz"
+                    }
+                ],
+                "availableChannel": {
+                    "@type": "ServiceChannel",
+                    "servicePhone": {
+                        "@type": "ContactPoint",
+                        "telephone": "+48721587252",
+                        "contactType": "customer service",
+                        "areaServed": "PL"
+                    }
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Co dokładnie obejmuje kompleksowe pranie tapicerki samochodowej?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Czyszczenie wnętrza auta obejmuje fotele, tylną kanapę, podsufitkę, podłogę, bagażnik, boczki drzwiowe, dywaniki oraz dokładne czyszczenie pasów bezpieczeństwa."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Czy usuwacie zapach dymu papierosowego i wilgoci z auta?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Tak. Ekstrakcja w połączeniu z odpowiednią chemią pomaga usunąć uciążliwe zapachy po papierosach, rozlanych płynach czy wilgoci."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Czy chemia do czyszczenia wnętrza samochodu jest bezpieczna?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Stosujemy środki przeznaczone do profesjonalnego czyszczenia tapicerki samochodowej i dobieramy je do rodzaju materiału oraz rodzaju zabrudzenia."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Jak szybko auto jest gotowe do jazdy po praniu tapicerki?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Dzięki usłudze profesjonalnego suszenia wnętrza samochodu możemy znacznie skrócić czas schnięcia. Dokładny czas zależy od zakresu prania i warunków."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
