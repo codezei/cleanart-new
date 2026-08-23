@@ -9,7 +9,7 @@ block html
                 meta(http-equiv="X-UA-Compatible" content="ie=edge")
                 meta(name="theme-color" content=themeColor)
                 title= pageTitle
-                link(rel="stylesheet" href="css/style.min.css?v=3.0.5")
+                link(rel="stylesheet" href="css/main.min.css?v=3.0.5")
                 link(rel="icon" href="img/favicon.ico" type="image/x-icon")
                 link(rel="apple-touch-icon" href="img/apple-touch-icon.png")
                 link(rel="canonical", href= domain + pageUrl)
@@ -29,5 +29,7 @@ block html
         body
             block content
             block scripts
-                script(src="js/libs.js?v=3.0.5", defer)
                 script(src="js/main.js?v=3.0.5", defer)
+                script(src="js/swiper-bundle.min.js", async)
+                script(src="js/fancybox.js", async)
+                script(src="js/beer-slider.js", async)

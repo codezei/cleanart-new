@@ -1,21 +1,21 @@
 
-import works from './modules/works'
+// import works from './modules/works'
 import header from './modules/header'
-import services from './modules/services'
+// import services from './modules/services'
 import cta from './modules/cta'
-import process from './modules/process'
+// import process from './modules/process'
 import contacts from './modules/contacts'
-import categories from './modules/categories'
+// import categories from './modules/categories'
 import 'regenerator-runtime/runtime';
 
 document.addEventListener('DOMContentLoaded', function () {
 
 	header()
-	services()
+	// services()
 	cta()
-	works()
-	process()
-	categories()
+	// works()
+	// process()
+	// categories()
 	contacts()
 
     function toggle() {

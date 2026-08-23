@@ -86,56 +86,6 @@
     return target;
   }
 
-  function _toConsumableArray(arr) {
-    return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
-  }
-
-  function _arrayWithoutHoles(arr) {
-    if (Array.isArray(arr)) return _arrayLikeToArray(arr);
-  }
-
-  function _iterableToArray(iter) {
-    if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-  }
-
-  function _unsupportedIterableToArray(o, minLen) {
-    if (!o) return;
-    if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-    var n = Object.prototype.toString.call(o).slice(8, -1);
-    if (n === "Object" && o.constructor) n = o.constructor.name;
-    if (n === "Map" || n === "Set") return Array.from(o);
-    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-  }
-
-  function _arrayLikeToArray(arr, len) {
-    if (len == null || len > arr.length) len = arr.length;
-
-    for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
-
-    return arr2;
-  }
-
-  function _nonIterableSpread() {
-    throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-  }
-
-  function works () {
-    Fancybox.bind(".gallery a", {
-      groupAll: true,
-      Thumbs: {
-        autoStart: true
-      },
-      Toolbar: {
-        display: [{
-          id: "counter",
-          position: "center"
-        }, "zoom", "slideshow", "fullscreen", "download", "close"]
-      },
-      animated: true,
-      dragToClose: true
-    });
-  }
-
   function header () {
     var header = document.querySelector('.header');
     var burger = document.querySelector('.js-burger');
@@ -147,58 +97,6 @@
       if (e.target.tagName === 'A') {
         document.documentElement.classList.remove('open-menu');
         burger.setAttribute('aria-expanded', !(burger.getAttribute('aria-expanded') === 'true' ? true : false));
-      }
-    });
-  }
-
-  function services () {
-    var servicesSwiper = new Swiper(".services-swiper", {
-      slidesPerView: 1,
-      spaceBetween: 16,
-      watchOverflow: true,
-      // pagination: {
-      //   el: ".swiper-pagination",
-      //   clickable: true,
-      // },
-      breakpoints: {
-        430: {
-          slidesPerView: 1.25,
-          spaceBetween: 16
-        },
-        576: {
-          slidesPerView: 1.25,
-          spaceBetween: 16
-        },
-        768: {
-          slidesPerView: 1.25,
-          spaceBetween: 16
-        },
-        992: {
-          slidesPerView: 1.5,
-          spaceBetween: 16
-        },
-        1200: {
-          slidesPerView: 4,
-          spaceBetween: 0
-        }
-      },
-      navigation: {
-        nextEl: ".swiper-navigation-button-next",
-        prevEl: ".swiper-navigation-button-prev"
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction'
-      },
-      on: {
-        lock: function lock(swiper) {
-          swiper.wrapperEl.classList.add('row');
-          swiper.wrapperEl.classList.add('row-cols-2');
-        },
-        unlock: function unlock(swiper) {
-          swiper.wrapperEl.classList.remove('row');
-          swiper.wrapperEl.classList.remove('row-cols-2');
-        }
       }
     });
   }
@@ -269,13 +167,6 @@
     }());
   }
 
-  function process () {
-    var sliders = document.querySelectorAll('.beer-slider');
-    sliders.forEach(function (slider) {
-      new BeerSlider(slider);
-    });
-  }
-
   function contacts () {
     var map = document.querySelector(".contacts__iframe");
     var trigger = document.getElementById("contacts");
@@ -306,87 +197,6 @@
       insertMap();
       map.replaceWith(iframe);
     }
-  }
-
-  function categories () {
-    var categoriesNavigation = _toConsumableArray(document.querySelectorAll(".categories-navigation-swiper"));
-
-    var categoriesContent = _toConsumableArray(document.querySelectorAll(".categories-content-swiper"));
-
-    categoriesNavigation.map(function (categoriesNavigationSwiper) {
-      var swiper = new Swiper(categoriesNavigationSwiper, {
-        spaceBetween: 0,
-        slidesPerView: 4,
-        watchSlidesProgress: true,
-        slideToClickedSlide: true,
-        initialSlide: 0,
-        roundLengths: true,
-        on: {
-          click: function click(swiper) {
-            var clickedIndex = swiper.clickedIndex;
-
-            if (clickedIndex !== undefined) {
-              swiper.slideTo(clickedIndex);
-            }
-          }
-        }
-      });
-      return swiper;
-    });
-    categoriesContent.map(function (categoriesContentSwiper, categoriesContentSwiperIndex) {
-      var swiper = new Swiper(categoriesContentSwiper, {
-        spaceBetween: 40,
-        allowTouchMove: categoriesContentSwiper.dataset.disallowTouch ? false : true,
-        slideToClickedSlide: true,
-        watchSlidesProgress: true,
-        autoHeight: categoriesContentSwiper.dataset.autoHeight ? true : false,
-        initialSlide: 0,
-        effect: 'fade',
-        fadeEffect: {
-          crossFade: true
-        },
-        speed: 600,
-        navigation: {
-          nextEl: ".swiper-navigation-button-next",
-          prevEl: ".swiper-navigation-button-prev"
-        },
-        thumbs: {
-          swiper: categoriesNavigation[categoriesContentSwiperIndex].swiper,
-          multipleActiveThumbs: false
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'fraction'
-        },
-        on: {
-          init: function init(swiper) {
-            var updateHeightButtons = swiper.el.querySelectorAll('.swiper-height-update');
-            updateHeightButtons.forEach(function (button) {
-              button.addEventListener('click', function () {
-                setTimeout(function () {
-                  swiper.updateAutoHeight(200);
-                }, 10);
-              });
-            });
-          }
-        }
-      });
-      return swiper;
-    });
-    categoriesNavigation.forEach(function (categoriesNavigationSwiper, categoriesNavigationSwiperIndex) {
-      categoriesNavigationSwiper.swiper.on("slideChange", function (swiper) {
-        if (categoriesContent[categoriesNavigationSwiperIndex]) {
-          categoriesContent[categoriesNavigationSwiperIndex].swiper.slideTo(swiper.activeIndex);
-        }
-      });
-    });
-    categoriesContent.forEach(function (categoriesContentSwiper, categoriesContentSwiperIndex) {
-      categoriesContentSwiper.swiper.on("slideChange", function (swiper) {
-        if (categoriesNavigation[categoriesContentSwiperIndex]) {
-          categoriesNavigation[categoriesContentSwiperIndex].swiper.slideTo(swiper.activeIndex);
-        }
-      });
-    });
   }
 
   function createCommonjsModule(fn, module) {
@@ -1134,12 +944,12 @@
   });
 
   document.addEventListener('DOMContentLoaded', function () {
-    header();
-    services();
-    cta();
-    works();
-    process();
-    categories();
+    header(); // services()
+
+    cta(); // works()
+    // process()
+    // categories()
+
     contacts();
 
     function toggle() {
