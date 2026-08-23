@@ -28,12 +28,10 @@ section#price.price.block.bg-light.js-observe
                             each price, i in prices.salon
                                 +price(price.name, price.value)(class="col animate-fade-in" style=`--i: ${i};`)
                 p.text-small.text-italic
-                    span.d-ib * Cena dotyczy czyszczenia jednej strony materaca.
-                    |&nbsp;
                     span.d-ib * Ceny mogą się różnić w zależności od stopnia zabrudzenia. Minimalna kwota zamówienia z dojazdem do klienta: od 230 zł
 
                 .categories-content-navigation
                     //- +cta-button()
                     +swiper-navigation()
         .categories-footer
-            +cta-button("Poproś o wycenę", "secondary")(class="btn-icon-tel")
+            +cta-button("Poproś o wycenę", "primary")(class="btn-icon-tel")

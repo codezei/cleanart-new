@@ -14,8 +14,8 @@ prepend head
 
 append head
     meta(name="robots" content="index, follow")
-    link(rel="preload" as="image" href="img/carpet-2-before-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
-    link(rel="preload" as="image" href="img/carpet-2-after-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
+    link(rel="preload" as="image" href="img/process/carpet-2-before-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
+    link(rel="preload" as="image" href="img/process/carpet-2-after-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
     link(rel="preload" href="fonts/montserrat-v31-latin-ext-300.woff2" as="font" type="font/woff2" crossorigin)
     link(rel="preload" href="fonts/montserrat-v31-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin)
     include components/carpet/schema
@@ -44,6 +44,7 @@ append content
         include components/carpet/promo
         include components/carpet/price
         include components/carpet/process
+        hr
         include components/carpet/reviews
         include components/carpet/works
         include components/carpet/cta

@@ -14,8 +14,8 @@ prepend head
 
 append head
     meta(name="robots" content="index, follow")
-    link(rel="preload" as="image" href="img/salon-2-before-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
-    link(rel="preload" as="image" href="img/salon-2-after-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
+    link(rel="preload" as="image" href="img/process/salon-2-before-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
+    link(rel="preload" as="image" href="img/process/salon-2-after-mob.webp" type="image/webp" media="(max-width: 430px)" fetchpriority="high")
     link(rel="preload" href="fonts/montserrat-v31-latin-ext-300.woff2" as="font" type="font/woff2" crossorigin)
     link(rel="preload" href="fonts/montserrat-v31-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin)
     include components/salon/schema
@@ -43,6 +43,7 @@ append content
         include components/salon/promo
         include components/salon/price
         include components/salon/process
+        hr
         include components/salon/reviews
         include components/salon/works
         include components/salon/cta

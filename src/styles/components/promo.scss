@@ -1,5 +1,6 @@
 .promo {
-    --padding-top-add: 70px;
+    --padding-top-add: 50px;
+
     &-grid {
         display: grid;
         align-items: center;
@@ -29,12 +30,14 @@
 
     &__list {
         margin-top: 3rem;
+
         &-item {
             &:nth-child(2) {
                 margin-bottom: -0.5rem;
                 margin-top: auto;
             }
         }
+
         .card__row {
             flex-direction: column;
             text-align: center;
@@ -42,14 +45,18 @@
     }
 
     @media screen and (min-width: 576px) {
+        --padding-top-add: 70px;
+
         &__list {
             margin-top: 4rem;
+
             &-item {
                 &:nth-child(2) {
                     margin-bottom: -1rem;
                     margin-top: auto;
                 }
             }
+
             .card__row {
                 flex-direction: row;
                 text-align: left;
@@ -60,25 +67,27 @@
     @media screen and (min-width: 992px) {
         &-grid {
             grid-template-areas:
-                    "H H H H H H H H H H H H"
-                    "F F F F F F F F F F F F"
-                    ". . B B B B B B B B . ."
+                "H H H H H H H H H H H H"
+                "F F F F F F F F F F F F"
+                ". . B B B B B B B B . ."
 
-                ;
+            ;
         }
     }
 
-    @media screen and (min-width:  1200px) {
+    @media screen and (min-width: 1200px) {
         &-grid {
             grid-template-areas:
                 "H H H H H H B B B B B B"
                 "F F F F F F B B B B B B"
                 ". . . . . . B B B B B B"
-                ;
+            ;
+
             &__footer {
                 text-align: left;
             }
         }
+
         &__subtitle {
             max-width: 500px;
         }
@@ -88,9 +97,11 @@
 
 
 
-.main-beer-slider {
+.main-beer-slider,
+.main-image {
     position: relative;
     display: inline-block;
+
     &:before {
         content: "";
         display: block;
@@ -107,31 +118,22 @@
         z-index: -1;
     }
 
-        /* М'яка контактна тінь під диваном поверх подіуму */
-        &:after {
-            content: "";
-            position: absolute;
-            bottom: 15%;
-            /* Регулюй вертикальне положення тіні відносно низу дивана */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 82%;
-            /* Ширина тіні відносно дивана */
-            height: 24px;
-            /* Висота розмиття */
-            border-radius: 50%;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 82%;
+        height: 24px;
+        border-radius: 50%;
+        background: radial-gradient(ellipse at center,
+                rgba(15, 23, 42, 0.55) 0%,
+                rgba(15, 23, 42, 0.2) 45%,
+                rgba(15, 23, 42, 0) 80%);
 
-            /* Глибокий темний градієнт із плавним згасанням до країв */
-            background: radial-gradient(ellipse at center,
-                    rgba(15, 23, 42, 0.55) 0%,
-                    rgba(15, 23, 42, 0.2) 45%,
-                    rgba(15, 23, 42, 0) 80%);
-
-            filter: blur(8px);
-            /* М'яке розмиття країв */
-            pointer-events: none;
-            /* Щоб тінь не заважала перетягувати слайдер */
-            z-index: 1;
-            /* Шар над подіумом, але під кнопкою слайдера */
-        }
+        filter: blur(8px);
+        pointer-events: none;
+        z-index: 1;
+    }
 }

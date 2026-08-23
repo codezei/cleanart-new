@@ -5,4 +5,4 @@ section.reviews.block#reviews.bg-light.js-observe
             each review, i in reviews.mattress
                 +review(review.name, review.rating, review.date, review.text)(class="col animate-fade-in" style=`--i: ${i};`)
         p.text-center
-            +cta-button("Chcę taką samą jakość", "secondary")(class="btn-icon-tel")
+            +cta-button("Chcę taką samą jakość", "primary")(class="btn-icon-tel")

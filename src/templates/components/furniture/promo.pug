@@ -8,7 +8,13 @@ section.promo#promo.bg-light
             //- h2 Pranie kanap, narożników i foteli we Wrocławiu
             p.h6.promo__subtitle.subtitle.text-light Czyścimy kanapy, narożniki, sofy, fotele, krzesła i inne meble tapicerowane, również ze skóry. Usuwamy plamy, kurz, sierść i nieprzyjemne zapachy, dobierając metodę czyszczenia do rodzaju materiału.
         .promo-grid__body
-            .main-beer-slider
-                +slider('sofa-2', "Sofa przed praniem tapicerki", "Sofa po praniu tapicerki – efekt czyszczenia")
+            .main-image
+                picture
+                    source(type="image/webp" srcset=`img/process/sofa-2-after-mob.webp` media="(max-width: 430px)")
+                    source(srcset=`img/process/sofa-2-after-mob.png` media="(max-width: 430px)")
+                    source(type="image/webp" srcset=`img/process/sofa-2-after.webp`)
+                    img(src=`img/process/sofa-2-after.png` alt="Sofa po praniu tapicerki – efekt czyszczenia")
+            //- .main-beer-slider
+            //-     +slider('sofa-2', "Sofa przed praniem tapicerki", "Sofa po praniu tapicerki – efekt czyszczenia")
         .promo-grid__footer
-            +cta-button("Zamów pranie tapicerki", "secondary")(class="btn-icon-tel")
+            +cta-button("Zamów pranie tapicerki", "primary")(class="btn-icon-tel")

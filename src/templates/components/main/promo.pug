@@ -2,13 +2,19 @@ section.promo#promo.bg.bg-light
     .container.custom-container.block.promo-grid
         .promo-grid__header
             .pre-title Czyszczenie ekstrakcyjne
-            h1.h1.promo__title.text-uppercase.title Pranie tapicerki, materacy i dywanów —
+            h1.h3.promo__title.text-uppercase.title Profesjonalne czyszczenie i pranie kanap, materacy i tapicerki samochodowej oraz czyszczenie i konserwacja skóry —
                 |&nbsp;
                 +cities()
-            p.promo__subtitle.subtitle.h6.text-light Oferujemy profesjonalne pranie i czyszczenie tapicerki we Wrocławiu i okolicach. Czyścimy meble tapicerowane i skórzane, materace, dywany, wykładziny oraz tapicerkę samochodową, z dojazdem do klienta.
+            p.promo__subtitle.subtitle.h6.text-light Profesjonalne czyszczenie z dojazdem do klienta. Skutecznie usuwamy plamy, zabrudzenia i nieprzyjemne zapachy.
         .promo-grid__body
-            .main-beer-slider
-                +slider("main-sofa", "Narożnik i dywan przed praniem", "Narożnik i dywan po praniu - efekt czyszczenia")(fetchpriority="high")
+            .main-image
+                picture
+                    source(type="image/webp" srcset=`img/process/main-sofa-after-mob.webp` media="(max-width: 430px)")
+                    source(srcset=`img/process/main-sofa-after-mob.png` media="(max-width: 430px)")
+                    source(type="image/webp" srcset=`img/process/main-sofa-after.webp`)
+                    img(src=`img/process/main-sofa-after.png` alt="Narożnik i dywan po praniu - efekt czyszczenia")
+            //- .main-beer-slider
+            //-     +slider("main-sofa", "Narożnik i dywan przed praniem", "Narożnik i dywan po praniu - efekt czyszczenia")(fetchpriority="high")
             .row.row-cols-3.promo__list
                 .promo__list-item.col.card.card-white.card-small
                     .card__header.card__row
@@ -29,4 +35,4 @@ section.promo#promo.bg.bg-light
                                 use(href="#safe")
                         .card__title Bezpieczne dla dzieci i zwierząt
         .promo-grid__footer
-            +cta-button("ZADZWOŃ I UMÓW TERMIN", "secondary")(class="btn-icon-tel")
+            +cta-button("ZADZWOŃ I UMÓW TERMIN", "primary")(class="btn-icon-tel")

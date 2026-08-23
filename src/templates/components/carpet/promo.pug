@@ -7,7 +7,13 @@ section.promo#promo.bg-light
                 +cities()
             p.h6.promo__subtitle.subtitle.text-light Czyścimy dywany i wykładziny w domach, mieszkaniach i innych obiektach. Usuwamy plamy, kurz, sierść oraz nieprzyjemne zapachy, dobierając sposób czyszczenia do rodzaju włókien i stopnia zabrudzenia.
         .promo-grid__body
-            .main-beer-slider
-                +slider('carpet-2', "Dywan przed praniem", "Dywan po praniu - efekt czyszczenia")
+            .main-image
+                picture
+                    source(type="image/webp" srcset=`img/process/carpet-2-after-mob.webp` media="(max-width: 430px)")
+                    source(srcset=`img/process/carpet-2-after-mob.png` media="(max-width: 430px)")
+                    source(type="image/webp" srcset=`img/process/carpet-2-after.webp`)
+                    img(src=`img/process/carpet-2-after.png` alt="Dywan po praniu - efekt czyszczenia")
+            //- .main-beer-slider
+            //-     +slider('carpet-2', "Dywan przed praniem", "Dywan po praniu - efekt czyszczenia")
         .promo-grid__footer
-            +cta-button("Zamów pranie dywanu", "secondary")(class="btn-icon-tel")
+            +cta-button("Zamów pranie dywanu", "primary")(class="btn-icon-tel")

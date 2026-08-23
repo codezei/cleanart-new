@@ -29,9 +29,10 @@ header.header
                 //- .header__menu-socials.text-center
                     //- +cta-messengers()
                 .header__menu-btn.text-center
-                    a.btn.btn-transparent.btn-small(href="tel:+48884412928")
-                        span.btn-text Zadzwoń
-                        span.btn.btn-primary.btn-icon-tel
+                    +cta-button("Zadzwoń", "secondary", "small")(class="btn-icon-tel")
+                    //- a.btn.btn-transparent.btn-small(href="tel:+48884412928")
+                    //-     span.btn-text Zadzwoń
+                    //-     span.btn.btn-primary.btn-icon-tel
             .header__burger
                 button.js-burger.btn.btn-transparent(type="button" aria-expanded="false" aria-controls="main-menu")
                     span.sr-only Otwórz menu mobilne

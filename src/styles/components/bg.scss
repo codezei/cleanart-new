@@ -50,8 +50,12 @@
     no-repeat,
     repeat-x;
 
-    /* Анімація хвиль */
-    animation: floatWaves 14s linear infinite;
+
+
+    @media screen and (min-width: 1200px) {
+            /* Анімація хвиль */
+                animation: floatWaves 14s linear infinite;
+    }
 
     .custom-container {
         position: relative;

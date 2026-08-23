@@ -7,8 +7,6 @@ section#price.price.bg.bg-wave.js-observe.block
                 each price, i in prices.carpet
                     +price(price.name, price.value)(class="col animate-fade-in" style=`--i: ${i};`)
             p.text-small.text-italic
-                span.d-ib * Cena dotyczy czyszczenia jednej strony materaca.
-                |&nbsp;
                 span.d-ib * Ceny mogą się różnić w zależności od stopnia zabrudzenia. Minimalna kwota zamówienia z dojazdem do klienta: od 230 zł
         .default-grid__footer
             +cta-button()(class="btn-icon-tel")

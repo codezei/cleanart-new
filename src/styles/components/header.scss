@@ -37,6 +37,13 @@
         }
     }
 
+    &__logo {
+        max-width: 50px;
+        @media screen and (min-width: 576px) {
+            max-width: 70px;
+        }
+    }
+
     &__burger {
         display: block;
 
@@ -48,6 +55,7 @@
     &__address {
         font-style: normal;
         margin-right: auto;
+        font-size: 0.9em;
     }
 
     &__menu {
@@ -151,11 +159,11 @@
             padding: 0.5rem;
             display: none;
 
-                            box-shadow: inset 1.5px 1.5px 3px 0px rgba(255, 255, 255, 1),
-                                    inset -1.5px -1.5px 3px 0px rgba(150, 180, 190, 0.25),
-                                    0 20px 40px -15px rgba(0, 50, 60, 0.15),
-                                    0 10px 15px -5px rgba(0, 50, 60, 0.08);
-                                    border-radius: 1rem;
+            box-shadow: inset 1.5px 1.5px 3px 0px rgba(255, 255, 255, 1),
+                    inset -1.5px -1.5px 3px 0px rgba(150, 180, 190, 0.25),
+                    0 20px 40px -15px rgba(0, 50, 60, 0.15),
+                    0 10px 15px -5px rgba(0, 50, 60, 0.08);
+                    border-radius: 1rem;
 
         }
     }
