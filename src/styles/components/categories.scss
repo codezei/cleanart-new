@@ -50,13 +50,13 @@
 
     &-content {
         --swiper-pagination-bottom: calc(100% + 0.5rem);
-        margin-left: -40px;
-        margin-right: -40px;
+        margin-left: -40px !important;
+        margin-right: -40px !important;
 
         &-swiper {
-            padding-right: 40px;
-            padding-left: 40px;
-            padding-bottom: 40px;
+            padding-right: 40px !important;
+            padding-left: 40px !important;
+            padding-bottom: 40px !important;
 
         }
 
